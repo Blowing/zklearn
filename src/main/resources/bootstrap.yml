@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: ${@profileActive@}
+  cloud:
+    zookeeper:
+      config:
+        enabled: true
+        root: config
+
+zookeeper:
+  config:
+    # 激活的配置项
+    active:
+      path: foundation.metrics,service,foundation.config,foundation.database.usercenter,foundation.kafka,foundation.topic,foundation.redis,package.idCreator,foundation.database.multiTenantUserService,service.certcenter
+      project:
+        path: zklearn
+
+
+
